@@ -26,7 +26,7 @@ model.add(Flatten())
 model.add(Dense(100))
 model.add(Dropout(0.5))
 model.add(Dense(10))
-model.compile(loss='categorical_crossentropy', optimizer='adadelta', metrics=['accuracy'])
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 model.fit(x_train, y_train, epochs=10,validation_data=(x_test, y_test))
 model.evaluate(x_test, y_test)
