@@ -10,7 +10,7 @@ dataframe = pd.read_csv('train.csv')
 dataframe.iloc[3,1:].values.reshape(28,28).astype('uint8')
 
 dataframe_x = dataframe.iloc[:,1:].values.reshape(len(df),28,28,1)
-y = df.iloc[:,0].values
+y = dataframe.iloc[:,0].values
 dataframe_y = keras.utils.to_categorical(y, num_classes=10)
 
 dataframe_x = np.array(dataframe_x)
